@@ -268,4 +268,22 @@ class SinglyLinkedList {
         return slow.data;
     }
 
+    public int kthFromEnd(int k) {
+
+        indexOutOfBoundCheck(k-1);
+
+        Node slow = this.head;
+        Node fast = this.head;
+
+        while(k-- != 0)
+            fast = fast.next;
+
+        while(fast != null) {
+            slow = slow.next;
+            fast = fast.next;
+        }
+
+        return slow.data;
+    }
+
 }

@@ -20,5 +20,8 @@ public class SinglyLinkedList_Client {
         System.out.println("mid is " + ll.findMid());
         System.out.println("first element is " + ll.getFirst());
         System.out.println("element at index 1 is " + ll.getAt(1));
+        ll.print();
+        int k=4;
+        System.out.println(k + "th node from end is " + ll.kthFromEnd(k));
     }
 }
