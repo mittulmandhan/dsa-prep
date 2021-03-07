@@ -286,4 +286,14 @@ class SinglyLinkedList {
         return slow.data;
     }
 
+    public void rightRotate() {
+        Node temp = head;
+        while(temp.next.next != null)
+            temp = temp.next;
+        tail.next = head;
+        head = tail;
+        temp.next = null;
+        tail = temp;
+    }
+
 }

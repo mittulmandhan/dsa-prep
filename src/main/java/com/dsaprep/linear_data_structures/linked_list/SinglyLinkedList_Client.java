@@ -23,5 +23,7 @@ public class SinglyLinkedList_Client {
         ll.print();
         int k=4;
         System.out.println(k + "th node from end is " + ll.kthFromEnd(k));
+        ll.rightRotate();
+        ll.print();
     }
 }
