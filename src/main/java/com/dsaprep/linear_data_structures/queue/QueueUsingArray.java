@@ -23,6 +23,7 @@ public class QueueUsingArray {
     // O(1)
     public void enqueue(int data) {
         if(this.size == this.CAPACITY || this.CAPACITY == 0) {
+            System.out.println("Queue is Full");
             return;
         }
         if(rear == -1) {
@@ -54,12 +55,21 @@ public class QueueUsingArray {
     // displays all the elements in the queue
     // O(n)
     public void display() {
-        if(size < 1) {
-            System.out.println("Queue is empty");
+        if(this.isEmpty())
             return;
-        }
-        for(int i = front; i <= rear; i++) {
-            System.out.print(queue[i] + ", ");
+
+        if(front <= rear) {
+            for(int idx = front; idx <= rear; idx++) {
+                System.out.print(queue[idx] + " ");
+            }
+        } else {
+            for(int idx = front; idx < this.CAPACITY; idx++) {
+                System.out.print(queue[idx] + " ");
+            }
+
+            for(int idx = 0; idx <= rear; idx++) {
+                System.out.print(queue[idx] + " ");
+            }
         }
         System.out.println();
     }

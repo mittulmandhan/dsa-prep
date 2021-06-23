@@ -2,7 +2,7 @@ package com.dsaprep.linear_data_structures.queue;
 
 public class QueueUsingArray_Client {
     public static void main(String[] args) throws Exception {
-        QueueUsingArray q = new QueueUsingArray();
+        QueueUsingArray q = new QueueUsingArray(5);
         q.dequeue();
         q.enqueue(5);
         q.enqueue(7);
@@ -23,6 +23,11 @@ public class QueueUsingArray_Client {
         System.out.println("dequeue " + q.dequeue());
         System.out.println(q.isEmpty());
         q.enqueue(19);
+        q.enqueue(20);
+        q.enqueue(21);
+        q.enqueue(22);
+        q.enqueue(23);
+        q.enqueue(25);
         q.display();
     }
 }
